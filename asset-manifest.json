@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.2696fbcb.css",
-    "main.js": "/static/js/main.f686a644.js",
+    "main.js": "/static/js/main.bf3f7679.js",
     "static/media/omyu_pretty.ttf": "/static/media/omyu_pretty.a709da7b5fd009ebd794.ttf",
     "index.html": "/index.html",
     "main.2696fbcb.css.map": "/static/css/main.2696fbcb.css.map",
-    "main.f686a644.js.map": "/static/js/main.f686a644.js.map"
+    "main.bf3f7679.js.map": "/static/js/main.bf3f7679.js.map"
   },
   "entrypoints": [
     "static/css/main.2696fbcb.css",
-    "static/js/main.f686a644.js"
+    "static/js/main.bf3f7679.js"
   ]
 }

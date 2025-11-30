@@ -5,7 +5,6 @@ import styled from "styled-components";
 import './styles/App.css';
 import palette from "./styles/colorPalette";
 
-import Header from "./components/Header";
 import Home from "./pages/home/Home";
 
 function App() {
@@ -13,9 +12,6 @@ function App() {
   return (
     <Container>
       <Router>
-        {/* 헤더: 블로그 타이틀 */}
-        <Header
-          onSelectHome={onSelectHome}/>
 
         <MainContent>
           {/* 컨텐츠 내용 */}

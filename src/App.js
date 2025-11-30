@@ -7,33 +7,8 @@ import palette from "./styles/colorPalette";
 
 import Header from "./components/Header";
 import Home from "./pages/home/Home";
-import Menus from "./components/menu/Menus";
-import Jmi from "./pages/jmi/Jmi";
-import Portfolio from "./pages/portfolio/Portfolio";
-import Posts from "./pages/posts/Posts";
-import PostDetail from "./pages/posts/PostDetail";
 
 function App() {
-  const [selectMenu, setSelectMenu] = useState("home");
-
-  const onSelectHome = () => {
-    setSelectMenu("home");
-  }
-
-  const onSelectJmi = () => {
-    setSelectMenu("jmi");
-  }
-
-  const onSelectPortfolio = () => {
-    setSelectMenu("portfolio");
-  }
-
-  const onSelectPosts = () => {
-    setSelectMenu("posts");
-  }
-
-  useEffect(() => {
-  }, [selectMenu]);
 
   return (
     <Container>
@@ -46,21 +21,10 @@ function App() {
           {/* 컨텐츠 내용 */}
           <Contents>
             <Routes>
-              <Route path="/" element={<Home onSelectJmi={onSelectJmi} onSelectPosts={onSelectPosts} onSelectPortfolio={onSelectPortfolio} />} />
-              <Route path="/jmi" element={<Jmi />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/posts" element={<Posts />} />
-              <Route path="/post-detail" element={<PostDetail />} />
+              <Route path="/" element={<Home />} />
             </Routes>
           </Contents>
 
-          {/* 메뉴 버튼 */}
-          <Menus
-            onSelectHome={onSelectHome}
-            onSelectJmi={onSelectJmi}
-            onSelectPosts={onSelectPosts}
-            onSelectPortfolio={onSelectPortfolio}
-            selectMenuApp={selectMenu}/>
 
         </MainContent>
 

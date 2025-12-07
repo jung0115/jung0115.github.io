@@ -5,13 +5,25 @@ import styled from "styled-components";
 import './styles/App.css';
 import palette from "./styles/colorPalette";
 
+import Header from "./components/Header";
 import Home from "./pages/home/Home";
 
 function App() {
+  const [selectMenu, setSelectMenu] = useState("home");
+
+  const onSelectHome = () => {
+    setSelectMenu("home");
+  }
+
+  useEffect(() => {
+  }, [selectMenu]);
 
   return (
     <Container>
       <Router>
+        {/* 헤더: 블로그 타이틀 */}
+        <Header
+          onSelectHome={onSelectHome}/>
 
         <MainContent>
           {/* 컨텐츠 내용 */}
@@ -21,9 +33,7 @@ function App() {
             </Routes>
           </Contents>
 
-
         </MainContent>
-
       </Router>
     </Container>
   );
@@ -44,7 +54,7 @@ const MainContent = styled.div`
   min-height: 100%;
   flex-direction: column;
   position: relative;
-  margin: 0vh 40px;
+  margin: 0vh 20vw;
   top: -20px;
 `;
 
